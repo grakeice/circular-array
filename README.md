@@ -1,15 +1,39 @@
 # circular-array
 
-To install dependencies:
+A TypeScript utility for circular array access. Allows you to access array elements cyclically with positive or negative indices.
+
+## Features
+
+-   Wrap any array and access elements cyclically (positive/negative indices)
+-   Get one full cycle as an array, infinite iterator, and for...of support
+-   TypeScript compatible
+
+## Installation
 
 ```bash
-bun install
+npm install @grakeice/circular-array
 ```
 
-To run:
+## Usage
 
-```bash
-bun run 
+```ts
+import { CircularArray } from "./src/CircularArray";
+
+const arr = new CircularArray([1, 2, 3]);
+console.log(arr.at(4)); // 2
+console.log(arr.at(-1)); // 3
+
+for (const v of arr) {
+	console.log(v); // 1, 2, 3
+}
+
+const gen = arr.cycle();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+console.log(gen.next().value); // 1 (infinite loop)
 ```
 
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## License
+
+MIT
