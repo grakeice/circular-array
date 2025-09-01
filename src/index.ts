@@ -1,3 +1,3 @@
-import { CircularArray } from "./CircularArray";
+import { CircularArray } from "./CircularArray.js";
 
 export { CircularArray };

@@ -3,6 +3,7 @@
 	"author": "grakeice",
 	"license": "MIT",
 	"version": "0.1.0-alpha.1",
+	"type": "module",
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
 		"@types/bun": "latest",
@@ -13,10 +14,11 @@
 		"typescript": "^5"
 	},
 	"exports": {
-		".": "./src"
+		".": "./dist"
 	},
 	"scripts": {
-		"prepare": "husky"
+		"prepare": "husky",
+		"prepublish": "tsc"
 	},
 	"lint-staged": {
 		"*.{ts}": [

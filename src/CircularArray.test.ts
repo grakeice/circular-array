@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { CircularArray } from "./CircularArray.ts";
+import { CircularArray } from "./CircularArray.js";
 
 describe("CircularArray", () => {
 	it("constructor throws on empty array", () => {
