@@ -23,11 +23,15 @@ jobs:
         with:
           node-version: "22"
           registry-url: "https://registry.npmjs.org"
+      - name: Install dependencies
+        run: |
+          bun install --frozen-lockfile
+        env:
+          # CI上では husky を動かさないようにする
+          # https://typicode.github.io/husky/guide.html#with-env-variables
+          HUSKY: "0"
       - name: Publish to NPM
         run: |
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          # CI上では husky を動かさないようにする
-          # https://typicode.github.io/husky/guide.html#with-env-variables
-          HUSKY: "0"
