@@ -2,7 +2,7 @@
 	"name": "@grakeice/circular-array",
 	"author": "grakeice",
 	"license": "MIT",
-	"version": "0.1.0-alpha.0",
+	"version": "0.1.0-alpha.1",
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
 		"@types/bun": "latest",
