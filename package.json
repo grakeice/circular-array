@@ -6,6 +6,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"files": ["dist"],
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
 		"@types/bun": "latest",
@@ -17,7 +18,8 @@
 	},
 	"scripts": {
 		"prepare": "husky",
-		"prepublish": "tsc"
+		"prepublish": "bun run build",
+		"build": "tsc"
 	},
 	"lint-staged": {
 		"*.{ts}": [
