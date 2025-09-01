@@ -28,3 +28,6 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # CI上では husky を動かさないようにする
+          # https://typicode.github.io/husky/guide.html#with-env-variables
+          HUSKY: "0"
