@@ -4,6 +4,8 @@
 	"license": "MIT",
 	"version": "0.1.0-alpha.2",
 	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
 		"@types/bun": "latest",
@@ -12,9 +14,6 @@
 	},
 	"peerDependencies": {
 		"typescript": "^5"
-	},
-	"exports": {
-		".": "./dist"
 	},
 	"scripts": {
 		"prepare": "husky",
