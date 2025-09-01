@@ -29,7 +29,7 @@ describe("CircularArray", () => {
 		expect(cycle).toEqual([1, 2, 3]);
 		cycle[0] = 100;
 		expect(arr.at(0)).toBe(1); // 元配列は不変
-		expect(cycle).not.toBe(arr["_base"]);
+		expect(cycle).not.toBe(arr.getOneCycle());
 	});
 
 	it("for...of iterates one cycle", () => {
