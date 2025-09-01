@@ -1,0 +1,26 @@
+{
+	"name": "circular-array",
+	"author": "grakeice",
+	"license": "MIT",
+	"version": "0.1.0",
+	"devDependencies": {
+		"@biomejs/biome": "2.2.2",
+		"@types/bun": "latest",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.5"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"exports": {
+		".": "./src"
+	},
+	"scripts": {
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{ts}": [
+			"biome check --fix"
+		]
+	}
+}
