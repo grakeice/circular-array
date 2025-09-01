@@ -1,5 +1,5 @@
 {
-	"name": "circular-array",
+	"name": "@grakeice/circular-array",
 	"author": "grakeice",
 	"license": "MIT",
 	"version": "0.1.0-alpha.0",
@@ -22,5 +22,8 @@
 		"*.{ts}": [
 			"biome check --fix"
 		]
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
